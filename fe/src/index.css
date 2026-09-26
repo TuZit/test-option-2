@@ -1,0 +1,141 @@
+/* Design tokens (shadcn/ui compatible) ------------------------------- */
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 4%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 4%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 4%;
+
+  --primary: 262 83% 58%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 240 5% 96%;
+  --secondary-foreground: 240 6% 12%;
+
+  --muted: 240 5% 96%;
+  --muted-foreground: 240 4% 46%;
+
+  --accent: 262 83% 96%;
+  --accent-foreground: 262 55% 32%;
+
+  --destructive: 0 72% 48%;
+  --destructive-foreground: 0 0% 100%;
+
+  --success: 145 63% 32%;
+  --success-foreground: 0 0% 100%;
+
+  --border: 240 6% 90%;
+  --input: 240 6% 88%;
+  --ring: 262 83% 58%;
+  --radius: 0.65rem;
+
+  --shadow-sm: 0 1px 2px 0 hsl(240 6% 10% / 0.06);
+  --shadow-md: 0 6px 18px -6px hsl(240 6% 10% / 0.18);
+
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 240 10% 6%;
+    --foreground: 0 0% 96%;
+
+    --card: 240 8% 9%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 240 8% 9%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 263 85% 68%;
+    --primary-foreground: 240 10% 6%;
+
+    --secondary: 240 5% 16%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 240 5% 16%;
+    --muted-foreground: 240 5% 66%;
+
+    --accent: 263 40% 22%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 70% 58%;
+    --destructive-foreground: 240 10% 6%;
+
+    --success: 145 55% 46%;
+    --success-foreground: 240 10% 6%;
+
+    --border: 240 5% 20%;
+    --input: 240 5% 24%;
+    --ring: 263 85% 68%;
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.4);
+    --shadow-md: 0 8px 24px -8px hsl(0 0% 0% / 0.6);
+
+    color-scheme: dark;
+  }
+}
+
+/* Base ---------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  background-image: radial-gradient(circle at 15% -10%, hsl(var(--primary) / 0.14), transparent 45%);
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 650;
+  line-height: 1.2;
+  color: hsl(var(--foreground));
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+::selection {
+  background: hsl(var(--primary) / 0.25);
+}
